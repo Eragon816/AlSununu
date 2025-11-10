@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <!-- Linking Normalize CSS Library -->
+    <link rel="stylesheet" href="./../css/normalize.css" />
+    <!-- Linking CSS Style File -->
+    <link rel="stylesheet" href="./../css/contact.css" />
+    <!-- Linking CSS RTL Style File -->
+    <link rel="stylesheet" href="./../css/contact-rtl.css" />
+    <!-- Linking FontAwasome Library -->
+    <link rel="stylesheet" href="./../css/all.min.css" />
+    <!-- Linking Main Font From Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Of Header Markup -->
+    <header>
+      <div class="container">
+        <h1>
+          <a href="./index-rtl.html"
+            ><img src="./../content/images/logo.png" alt=""
+          /></a>
+        </h1>
+        <div class="nav-container">
+          <ul class="nav transition-all">
+            <li>
+              <a class="transition-all" href="./index-rtl.html"
+                >الصفحة الرئيسية</a
+              >
+            </li>
+            <li>
+              <a class="transition-all" href="./uberuns-rtl.html">عن الفريق</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./activities-rtl.html">الانشطة</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./erasmus-rtl.html">الرحلات</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./contact-rtl.html">تواصل معنا</a>
+            </li>
+          </ul>
+          <div class="list-icon transition-all">
+            <i class="fa-solid fa-list-ul"></i>
+          </div>
+          <div class="lang transition-all">
+            <img
+              src="./../content/images/arabic-flag.png"
+              alt="Arabic Flag is Missing"
+            />
+          </div>
+        </div>
+        <ul class="lang-list">
+          <li title="Germany">
+            <a class="lang transition-all" href="./contact.html"
+              ><span>Germany</span>
+              <div class="germany">
+                <span class="first"></span>
+                <span class="middle"></span>
+                <span class="last"></span></div
+            ></a>
+          </li>
+          <li title="Arabic">
+            <a class="lang transition-all" href="./contact-rtl.html">
+              <span>Arabic</span>
+              <img
+                src="./../content/images/arabic-flag.png"
+                alt="Arabic Flag is Missing"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Of Header Markup -->
+
+    <!-- Start Of Form Markup -->
+    <div class="container form">
+      <h3 class="main-title">هل لديك أي أسئلة أو اقتراحات؟</h3>
+      <p class="info-form">
+        استخدم النموذج التالي لمشاركة رغباتك، أفكارك أو أسئلتك معنا. نحن نرحب
+        بكل رسالة وسنرد عليك في أسرع وقت ممكن!
+      </p>
+      <form
+        action="https://formsubmit.co/gehad3129@gmail.com"
+        method="POST"
+        id="contact"
+      >
+        <!-- Betreff der E-Mail -->
+        <input
+          type="hidden"
+          name="subject"
+          value="Neue Kontaktanfrage über die Webseite"
+        />
+
+        <!-- Spam-Schutz -->
+        <input type="hidden" name="_captcha" value="false" />
+
+        <!-- Weiterleitung nach dem Absenden -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://eragon816.github.io/pages/danke.html"
+        />
+
+        <div>
+          <label for="name">الاسم الكامل</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="city">المدينة</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+        <div>
+          <label for="mail">البريد الالكتروني</label>
+          <input type="email" id="mail" name="email" required />
+        </div>
+        <div>
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div>
+          <label for="toughts">رسالتك</label>
+          <textarea id="toughts" name="message" required></textarea>
+        </div>
+        <div class="btn">
+          <button type="submit">ارسال</button>
+        </div>
+      </form>
+    </div>
+    <!-- End Of Form Markup -->
+
+    <!-- Starting Of Footer Markup -->
+    <footer>
+      <img src="../content/images/logo.png" alt="Logo Is Missing" />
+      <div class="contact">
+        <div class="info">
+          Kontakt:
+          <ul>
+            <li>Passage 13,</li>
+            <li>06122 Halle (Saale)</li>
+            <li>Telefon: <a href="tel:017644791487">0176 44791487</a></li>
+            <li>
+              E-Mail:
+              <a href="mailto:alsununu.e.v@gmail.com">alsununu.e.v@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="media">
+          Folge uns:
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/al.sununu/" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@alsununu?_t=8mbwecw9nf3&_r=1"
+                title="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/Alsununu-ev/61554123457537/"
+                title="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <ul>
+            <li>Impressum</li>
+            <li>Datenschutz</li>
+            <li>Presse</li>
+            <li>Team</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Ending Of Footer Markup -->
+
+    <!-- Linking JavaScript File -->
+    <script src="./../js/main.js"></script>
+  </body>
+</html>

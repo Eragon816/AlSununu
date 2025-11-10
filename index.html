@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlSununu</title>
+    <!-- Linking Normalize CSS Library -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- Linking Swiper CSS Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Linking FontAwasome Library -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Linking CSS Style File -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Linking Main Font From Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Of Header Markup -->
+    <header>
+      <div class="container">
+        <h1>
+          <a href="./index.html"
+            ><img src="./content/images/logo.png" alt=""
+          /></a>
+        </h1>
+        <div class="nav-container">
+          <ul class="nav transition-all">
+            <li>
+              <a class="transition-all" href="./index.html">Startseite</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./pages/uberuns.html">Über Uns</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./pages/activities.html"
+                >Aktivitäten</a
+              >
+            </li>
+            <li>
+              <a class="transition-all" href="./pages/erasmus.html">Erasmus+</a>
+            </li>
+            <li class="contact-button">
+              <a class="transition-all" href="./pages/contact.html">Kontakt</a>
+            </li>
+          </ul>
+          <div class="list-icon transition-all">
+            <i class="fa-solid fa-list-ul"></i>
+          </div>
+          <div class="lang transition-all">
+            <div class="germany">
+              <span class="first"></span>
+              <span class="middle"></span>
+              <span class="last"></span>
+            </div>
+          </div>
+        </div>
+        <ul class="lang-list">
+          <li title="Germany">
+            <a class="lang transition-all" href="./index.html"
+              ><span>Germany</span>
+              <div class="germany">
+                <span class="first"></span>
+                <span class="middle"></span>
+                <span class="last"></span></div
+            ></a>
+          </li>
+          <li title="Arabic">
+            <a class="lang transition-all" href="./pages/index-rtl.html">
+              <span>Arabic</span>
+              <img
+                src="./content/images/arabic-flag.png"
+                alt="Arabic Flag is Missing"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Of Header Markup -->
+
+    <!-- Start Of Landing Markup -->
+    <section class="landing">
+      <div class="container">
+        <div class="text" id="landing-text-container">
+          <h1>Al-SUNUNU E. V.</h1>
+          <p id="landing-text">
+            Der Al-Sununu Verein engagiert sich für Jugendliche mit
+            Migrationshintergrund und unterstützt sie dabei, ihre Talente zu
+            entfalten, ihre kulturellen Wurzeln zu stärken und neue Perspektiven
+            zu entdecken.
+          </p>
+        </div>
+        <div class="image" id="landing-image-container">
+          <img
+            src="./content/images/aboutus-landing.png"
+            alt="Al-Sununu Verein"
+            id="landing-image"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- End Of Landing Markup -->
+
+    <!-- Starting Of Current Activities Markup -->
+    <section class="current-activities section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="main-title">Aktuelle Aktivitäten</h2>
+        </div>
+        <div class="swiper">
+          <div class="activities-container swiper-wrapper">
+            <div class="activity card swiper-slide">
+              <img
+                src="./content/images/event-image.png"
+                alt="Image not available"
+              />
+              <p class="card-text">
+                Egal ob Anfänger oder Profi – alle sind herzlich willkommen!
+                Komm vorbei und bleib auch im Winter aktiv!
+              </p>
+              <a class="card-button">Zur Anmeldung</a>
+              <div class="activity-info">
+                <h3>Activities info</h3>
+                <a href="https://chat.whatsapp.com/FxLxdMOMJR7IvLOJryJcEI"
+                  >Join Our Whatsup Group</a
+                >
+                <p class="time">12:35 - 13:30</p>
+                <p class="location">Passage 13, 016122 Halle Saale</p>
+                <p class="hall"></p>
+                <span class="btn"><i class="fa-solid fa-x"></i></span>
+              </div>
+            </div>
+            <div class="activity card swiper-slide">
+              <img
+                src="./content/images/event-image.png"
+                alt="Image not available"
+              />
+              <p class="card-text">
+                Jugendtreff – Dein Ort zum Entspannen und Mitmachen!
+              </p>
+              <a class="card-button">Zur Anmeldung</a>
+              <div class="activity-info">
+                <h3>Activities info</h3>
+                <a href="./">Join Our Whatsup Group</a>
+                <p class="time">12:35 - 13:30</p>
+                <p class="location">Passage 13, 016122 Halle Saale</p>
+                <p class="hall"></p>
+                <span class="btn"><i class="fa-solid fa-x"></i></span>
+              </div>
+            </div>
+            <div class="activity card swiper-slide">
+              <img
+                src="./content/images/event-image.png"
+                alt="Image not available"
+              />
+              <p class="card-text">Musik – Der Klang, der verbindet</p>
+              <a class="card-button">Zur Anmeldung</a>
+              <div class="activity-info">
+                <h3>Activities info</h3>
+                <a href="./">Join Our Whatsup Group</a>
+                <p class="time">12:35 - 13:30</p>
+                <p class="location">Passage 13, 016122 Halle Saale</p>
+                <p class="hall"></p>
+                <span class="btn"><i class="fa-solid fa-x"></i></span>
+              </div>
+            </div>
+            <div class="activity card swiper-slide">
+              <img
+                src="./content/images/event-image.png"
+                alt="Image not available"
+              />
+              <p class="card-text">
+                Egal ob Anfänger oder Profi – alle sind herzlich willkommen!
+                Komm vorbei und bleib auch im Winter aktiv!
+              </p>
+              <a class="card-button">Zur Anmeldung</a>
+              <div class="activity-info">
+                <h3>Activities info</h3>
+                <a href="https://chat.whatsapp.com/FxLxdMOMJR7IvLOJryJcEI"
+                  >Join Our Whatsup Group</a
+                >
+                <p class="time">12:35 - 13:30</p>
+                <p class="location">Passage 13, 016122 Halle Saale</p>
+                <p class="hall"></p>
+                <span class="btn"><i class="fa-solid fa-x"></i></span>
+              </div>
+            </div>
+            <div class="activity card swiper-slide">
+              <img
+                src="./content/images/event-image.png"
+                alt="Image not available"
+              />
+              <p class="card-text">
+                Jugendtreff – Dein Ort zum Entspannen und Mitmachen!
+              </p>
+              <a class="card-button">Zur Anmeldung</a>
+              <div class="activity-info">
+                <h3>Activities info</h3>
+                <a href="./">Join Our Whatsup Group</a>
+                <p class="time">12:35 - 13:30</p>
+                <p class="location">Passage 13, 016122 Halle Saale</p>
+                <p class="hall"></p>
+                <span class="btn"><i class="fa-solid fa-x"></i></span>
+              </div>
+            </div>
+            <div class="activity card swiper-slide">
+              <img
+                src="./content/images/event-image.png"
+                alt="Image not available"
+              />
+              <p class="card-text">Musik – Der Klang, der verbindet</p>
+              <a class="card-button">Zur Anmeldung</a>
+              <div class="activity-info">
+                <h3>Activities info</h3>
+                <a href="./">Join Our Whatsup Group</a>
+                <p class="time">12:35 - 13:30</p>
+                <p class="location">Passage 13, 016122 Halle Saale</p>
+                <p class="hall"></p>
+                <span class="btn"><i class="fa-solid fa-x"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending Of Current Activities Markup -->
+
+    <!-- Starting Of Erasmus Activities Markup -->
+    <section class="erasmus-activities section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="main-title">Erasmus+ Aktivitäten</h2>
+        </div>
+        <div class="erasmus-info">
+          <div class="erasmus-text">
+            Wir bei Al-Sununu bieten auch Erasmus+ Aktivitäten an, die jungen
+            Menschen eine einzigartige Möglichkeit bieten, an Bildungs-,
+            Trainings- und Kulturaustauschprogrammen innerhalb Deutschlands und
+            im Ausland teilzunehmen. Diese Aktivitäten zielen darauf ab,
+            informelles Lernen zu fördern, persönliche und berufliche
+            Fähigkeiten weiterzuentwickeln und Brücken des Verständnisses
+            zwischen verschiedenen Kulturen zu bauen.
+            <a href="./pages/erasmus.html">Weiterlesen.......</a>
+          </div>
+          <div class="erasmus-image">
+            <img
+              src="./content/images/erasmus-logo.jpeg"
+              alt="Erasmus Logo Is Missing"
+            />
+          </div>
+        </div>
+        <div class="activities-container">
+          <div class="erasmus card">
+            <div class="image-container">
+              <img
+                src="./content/images/erasmus1.png"
+                alt="Image not available"
+              />
+            </div>
+            <div class="card-text">
+              Wir hatten eine unglaubliche Zeit in Mazedonien, wo sie uns
+              Trainer auf ihrem Weg zum Trainer unterstützt haben! <br />
+              Was Wir Teilnehmer erlebt haben:
+              <ul>
+                <li>
+                  <i class="fa-solid fa-square-check"></i> Moderne und Diverse
+                  Trainingsmethoden
+                </li>
+                <li><i class="fa-solid fa-square-check"></i> Praxis Übungen</li>
+                <li><i class="fa-solid fa-square-check"></i> Experten-Tipps</li>
+                <li>
+                  <i class="fa-solid fa-square-check"></i> Zertifikat nach
+                  Abschluss
+                </li>
+              </ul>
+            </div>
+            <a class="card-button" href="#">Zum Feedback</a>
+          </div>
+          <div class="erasmus card">
+            <div class="image-container">
+              <img
+                src="./content/images/erasmus2.png"
+                alt="Image not available"
+              />
+            </div>
+            <p class="card-text">
+              Unsere jungen Menschen in Saragossa entwickeln ihre Fähigkeiten
+              und Stärken im Berufsleben weiter und verbessern ihre Kompetenzen
+              in Vorstellungsgesprächen. Gleichzeitig erkunden sie die Stadt
+              Saragossa und lernen ihre Kultur und Traditionen kennen
+              <span class="flag spain"></span>
+            </p>
+            <a class="card-button" href="#">Zum Feedback</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ending Of Erasmus Activities Markup -->
+
+    <!-- Starting Of Joinning Markup -->
+    <section class="joinning section">
+      <div class="container section">
+        <div class="text-container">
+          <p>
+            Bewirb dich und werde Teil unseres Teams! Du möchtest deine
+            Fähigkeiten einbringen, neue Herausforderungen annehmen und
+            gemeinsam mit uns etwas bewegen? Wir suchen engagierte Menschen, die
+            unser Team mit ihrer Energie und Kreativität bereichern.
+          </p>
+          Was wir bieten:
+          <ul>
+            <li>Eine Gemeinschaft, die füreinander da ist und zusammenhält.</li>
+            <li>
+              Die Möglichkeit, an vielseitigen Aktivitäten und Events
+              teilzunehmen.
+            </li>
+            <li>Ein Ort, an dem deine Ideen geschätzt und gehört werden.</li>
+          </ul>
+          <p>
+            Dein Weg zu uns:Klicke auf den Anmeldungslink und werde Teil unseres
+            Teams. Wir freuen uns darauf, dich kennenzulernen! 😊
+          </p>
+          <a class="card-button" href="./pages/contact.html">Anmeldungslink</a>
+        </div>
+      </div>
+    </section>
+    <!-- Ending Of Joinning Markup -->
+
+    <!-- Starting Of Footer Markup -->
+    <footer>
+      <img src="./content/images/logo.png" alt="Logo Is Missing" />
+      <div class="contact">
+        <div class="info">
+          Kontakt:
+          <ul>
+            <li>Passage 13,</li>
+            <li>06122 Halle (Saale)</li>
+            <li>Telefon: <a href="tel:017644791487">0176 44791487</a></li>
+            <li>
+              E-Mail:
+              <a href="mailto:alsununu.e.v@gmail.com">alsununu.e.v@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="media">
+          Folge uns:
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/al.sununu/" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@alsununu?_t=8mbwecw9nf3&_r=1"
+                title="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/Alsununu-ev/61554123457537/"
+                title="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <ul>
+            <li>Impressum</li>
+            <li>Datenschutz</li>
+            <li>Presse</li>
+            <li>Team</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Ending Of Footer Markup -->
+
+    <!-- Linking Swiper JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking JS File -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

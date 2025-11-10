@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerie - AlSununu</title>
+    <!-- Linking Normalize CSS Library -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <!-- Linking Swiper CSS Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Linking FontAwasome Library -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- Linking CSS Style File -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Linking Main Font From Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Styles for Gallery Grid -->
+    <style>
+      .gallery-page {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      .gallery-section {
+        margin-bottom: 80px;
+      }
+      .gallery-section:last-child {
+        margin-bottom: 0;
+      }
+      .gallery-section h3 {
+        font-size: 28px;
+        color: var(--main-color);
+        margin-bottom: 10px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .gallery-section p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #555;
+        max-width: 800px;
+        margin-bottom: 40px;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .gallery-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start Of Header Markup -->
+    <header>
+      <div class="container">
+        <h1>
+          <a href="../index.html"
+            ><img src="../content/images/logo.png" alt=""
+          /></a>
+        </h1>
+        <div class="nav-container">
+          <ul class="nav transition-all">
+            <li>
+              <a class="transition-all" href="../index.html">Startseite</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./uberuns.html">Über Uns</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./activities.html">Aktivitäten</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./erasmus.html">Erasmus+</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./gallery.html">Galerie</a>
+            </li>
+            <li class="contact-button">
+              <a class="transition-all" href="./contact.html">Kontakt</a>
+            </li>
+          </ul>
+          <div class="list-icon transition-all">
+            <i class="fa-solid fa-list-ul"></i>
+          </div>
+          <div class="lang transition-all">
+            <div class="germany">
+              <span class="first"></span>
+              <span class="middle"></span>
+              <span class="last"></span>
+            </div>
+          </div>
+        </div>
+        <ul class="lang-list">
+          <li title="Germany">
+            <a class="lang transition-all" href="../index.html"
+              ><span>Germany</span>
+              <div class="germany">
+                <span class="first"></span>
+                <span class="middle"></span>
+                <span class="last"></span></div
+            ></a>
+          </li>
+          <li title="Arabic">
+            <a class="lang transition-all" href="./index-rtl.html">
+              <span>Arabic</span>
+              <img
+                src="../content/images/arabic-flag.png"
+                alt="Arabic Flag is Missing"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Of Header Markup -->
+
+    <!-- Start Of Gallery Markup -->
+    <main class="gallery-page section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="main-title">Galerie & Eindrücke</h2>
+        </div>
+
+        <!-- Macedonia Gallery Section -->
+        <div id="mazedonien" class="gallery-section">
+          <h3>
+            <i class="fa-solid fa-chalkboard-user"></i> Erasmus+ Training in
+            Mazedonien
+          </h3>
+          <p>
+            Einblicke in unser intensives Training, bei dem wir zukünftige
+            Trainer ausgebildet haben. Es war eine Reise voller Lernen,
+            Teamarbeit und unvergesslicher Momente in einer wunderschönen
+            Umgebung.
+          </p>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/003893/FFFFFF?text=Team+Workshop"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/F5C300/000000?text=Praxisübung"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/D2112C/FFFFFF?text=Kulturabend"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/87898A/FFFFFF?text=Abschlussfeier"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/003893/FFFFFF?text=Gruppenfoto"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/F5C300/000000?text=Networking"
+                alt="Gallery Image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Zaragoza Gallery Section -->
+        <div id="saragossa" class="gallery-section">
+          <h3>
+            <i class="fa-solid fa-plane-departure"></i> Jugendaustausch in
+            Saragossa, Spanien <span class="flag spain"></span>
+          </h3>
+          <p>
+            Unsere Teilnehmer erkundeten die Kultur Saragossas und entwickelten
+            gleichzeitig wichtige berufliche Fähigkeiten. Eine perfekte Mischung
+            aus Kultur, Bildung und Spaß unter der spanischen Sonne.
+          </p>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/AA151B/FFFFFF?text=Stadterkundung"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/F1BF00/000000?text=Skill-Training"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/87898A/FFFFFF?text=Team-Building"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/AA151B/FFFFFF?text=Lokale+Küche"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/F1BF00/000000?text=Abschiedsabend"
+                alt="Gallery Image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://via.placeholder.com/400x300/003893/FFFFFF?text=Neue+Freunde"
+                alt="Gallery Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End Of Gallery Markup -->
+
+    <!-- Starting Of Footer Markup -->
+    <footer>
+      <img src="../content/images/logo.png" alt="Logo Is Missing" />
+      <div class="contact">
+        <div class="info">
+          Kontakt:
+          <ul>
+            <li>Passage 13,</li>
+            <li>06122 Halle (Saale)</li>
+            <li>Telefon: <a href="tel:017644791487">0176 44791487</a></li>
+            <li>
+              E-Mail:
+              <a href="mailto:alsununu.e.v@gmail.com">alsununu.e.v@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="media">
+          Folge uns:
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/al.sununu/" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@alsununu?_t=8mbwecw9nf3&_r=1"
+                title="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/Alsununu-ev/61554123457537/"
+                title="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <ul>
+            <li>Impressum</li>
+            <li>Datenschutz</li>
+            <li>Presse</li>
+            <li>Team</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Ending Of Footer Markup -->
+
+    <!-- Linking JavaScript File -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

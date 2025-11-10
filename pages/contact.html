@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <!-- Linking Normalize CSS Library -->
+    <link rel="stylesheet" href="./../css/normalize.css" />
+    <!-- Linking CSS Style File -->
+    <link rel="stylesheet" href="./../css/contact.css" />
+    <!-- Linking FontAwasome Library -->
+    <link rel="stylesheet" href="./../css/all.min.css" />
+    <!-- Linking Main Font From Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Of Header Markup -->
+    <header>
+      <div class="container">
+        <h1>
+          <a href="./../index.html"
+            ><img src="./../content/images/logo.png" alt=""
+          /></a>
+        </h1>
+        <div class="nav-container">
+          <ul class="nav transition-all">
+            <li>
+              <a class="transition-all" href="./../index.html">Startseite</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./uberuns.html">Über Uns</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./activities.html">Aktivitäten</a>
+            </li>
+            <li>
+              <a class="transition-all" href="./erasmus.html">Erasmus+</a>
+            </li>
+            <li><a class="transition-all" href="./contact.html">Kontakt</a></li>
+          </ul>
+          <div class="list-icon transition-all">
+            <i class="fa-solid fa-list-ul"></i>
+          </div>
+          <div class="lang transition-all">
+            <div class="germany">
+              <span class="first"></span>
+              <span class="middle"></span>
+              <span class="last"></span>
+            </div>
+          </div>
+        </div>
+        <ul class="lang-list">
+          <li title="Germany">
+            <a class="lang transition-all" href="./contact.html"
+              ><span>Germany</span>
+              <div class="germany">
+                <span class="first"></span>
+                <span class="middle"></span>
+                <span class="last"></span></div
+            ></a>
+          </li>
+          <li title="Arabic">
+            <a class="lang transition-all" href="./contact-rtl.html">
+              <span>Arabic</span>
+              <img
+                src="./../content/images/arabic-flag.png"
+                alt="Arabic Flag is Missing"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Of Header Markup -->
+
+    <!-- Start Of Form Markup -->
+    <div class="container form">
+      <h3 class="main-title">Hast du Fragen oder Anregungen?</h3>
+      <p class="info-form">
+        Nutze einfach das folgende Formular, um uns deine Wünsche, Ideen oder
+        Fragen mitzuteilen. Wir freuen uns über jede Nachricht und melden uns so
+        schnell wie möglich bei dir!
+      </p>
+      <form
+        action="https://formsubmit.co/gehad3129@gmail.com"
+        method="POST"
+        id="contact"
+      >
+        <!-- Betreff der E-Mail -->
+        <input
+          type="hidden"
+          name="subject"
+          value="Neue Kontaktanfrage über die Webseite"
+        />
+
+        <!-- Spam-Schutz -->
+        <input type="hidden" name="_captcha" value="false" />
+
+        <!-- Weiterleitung nach dem Absenden -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://eragon816.github.io/pages/danke.html"
+        />
+
+        <div>
+          <label for="name">Vor- und Nachname</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="city">Stadt</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+        <div>
+          <label for="mail">E-Mail-Adresse</label>
+          <input type="email" id="mail" name="email" required />
+        </div>
+        <div>
+          <label for="phone">Handy-Nummer</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div>
+          <label for="toughts">Deine Nachricht</label>
+          <textarea id="toughts" name="message" required></textarea>
+        </div>
+        <div class="btn">
+          <button type="submit">Nachricht senden</button>
+        </div>
+      </form>
+    </div>
+    <!-- End Of Form Markup -->
+
+    <!-- Starting Of Footer Markup -->
+    <footer>
+      <img src="../content/images/logo.png" alt="Logo Is Missing" />
+      <div class="contact">
+        <div class="info">
+          Kontakt:
+          <ul>
+            <li>Passage 13,</li>
+            <li>06122 Halle (Saale)</li>
+            <li>Telefon: <a href="tel:017644791487">0176 44791487</a></li>
+            <li>
+              E-Mail:
+              <a href="mailto:alsununu.e.v@gmail.com">alsununu.e.v@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="media">
+          Folge uns:
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/al.sununu/" title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@alsununu?_t=8mbwecw9nf3&_r=1"
+                title="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/Alsununu-ev/61554123457537/"
+                title="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <ul>
+            <li>Impressum</li>
+            <li>Datenschutz</li>
+            <li>Presse</li>
+            <li>Team</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Ending Of Footer Markup -->
+
+    <!-- Linking JavaScript File -->
+    <script src="./../js/main.js"></script>
+    <script>
+      (function () {
+        const nextInput = document.querySelector('input[name="_next"]');
+        if (nextInput) {
+          if (window.location.origin && window.location.origin !== "null") {
+            nextInput.value = window.location.origin + "/pages/danke.html";
+          } else {
+            // fallback: relative path
+            nextInput.value = "../pages/danke.html";
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
