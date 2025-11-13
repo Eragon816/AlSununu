@@ -409,7 +409,7 @@ header .container .nav-container .lang.shadow {
   top: -40px;
   width: 100%;
   height: 100%;
-  background-color: var(--background-color);
+  background-color:#fcf5e1;
   z-index: -1;
   transform: skewY(-6deg);
   transform-origin: top left;

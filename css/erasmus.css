@@ -728,7 +728,7 @@ header .container .nav-container .lang-shadow {
   height: 260px; /* Increased height */
   object-fit: cover; /* Crop the image, do not stretch */
   border-radius: 12px;
-  margin: 0 auto; /* Center the image horizontally */
+  margin: 20px auto; /* Center the image horizontally */
 }
 
 .project .info {
