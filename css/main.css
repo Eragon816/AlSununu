@@ -52,7 +52,7 @@ p {
 img {
   width: 100%;
   max-height: 100%;
-  object-fit: fill;
+  object-fit: fill; /* Default global style */
 }
 
 svg {
@@ -148,7 +148,9 @@ svg {
   color: var(--secondry-color);
 }
 
-/* Ending Of Activities Header Style*/
+/* Ending Of Activities Header Style */
+
+/* --------------- CARD STYLES --------------- */
 
 .card {
   display: flex;
@@ -157,15 +159,19 @@ svg {
   position: relative;
   box-shadow: 0 2px 2px var(--shadow-color);
   cursor: grabbing;
+  background-color: #fff; /* White background for cards looks cleaner */
+  border-radius: 6px;
+  overflow: hidden; /* Ensures content stays inside rounded corners */
 }
 
 .card-text {
   color: var(--secondry-color);
-  padding-inline: 10px;
-  padding-block: var(--head-padding) 50px;
+  padding-inline: 15px; /* Slightly more padding */
+  padding-block: 10px 50px; /* Reduced top padding */
   line-height: 1.5;
   word-break: break-word;
-  margin-bottom: var(--section-margin);
+  margin-bottom: 0; /* Removing large margin to fit in swiper */
+  flex-grow: 1; /* Allows text area to fill remaining space */
 }
 
 .card-button {
@@ -175,18 +181,12 @@ svg {
   background-color: var(--background-color);
   color: var(--secondry-color);
   position: absolute;
-  bottom: 0;
+  bottom: 15px; /* Fixed distance from bottom */
   left: 50%;
-  transform: translate(-50%, 50%);
-  -webkit-transform: translate(-50%, 50%);
-  -moz-transform: translate(-50%, 50%);
-  -ms-transform: translate(-50%, 50%);
-  -o-transform: translate(-50%, 50%);
+  transform: translateX(-50%);
   border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  font-weight: 600;
+  z-index: 2;
 }
 
 .card .activity-info {
@@ -200,21 +200,9 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  z-index: 1;
+  z-index: 10;
   transition: 0.4s;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
 }
 
 .card .activity-info.visible {
@@ -246,14 +234,6 @@ svg {
   left: 100%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   cursor: pointer;
 }
 
@@ -266,10 +246,6 @@ svg {
   border: 1px solid #ccc;
   vertical-align: middle;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
 }
 
 /* Starting Of Germany Flag Style */
@@ -406,10 +382,6 @@ header .container .nav-container .nav {
   align-items: center;
   gap: var(--secondry-padding);
   transform: 0.3s;
-  -webkit-transform: 0.3s;
-  -moz-transform: 0.3s;
-  -ms-transform: 0.3s;
-  -o-transform: 0.3s;
 }
 
 header .container .nav-container .nav li {
@@ -422,10 +394,6 @@ header .container .nav-container .nav li:last-child {
   background-color: var(--background-color);
   padding: 15px;
   border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
 }
 
 header .container .nav-container .nav li a {
@@ -452,10 +420,6 @@ header .container .nav-container .nav li:last-child a {
   object-fit: contain;
   cursor: pointer;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 header .container .nav-container .lang.shadow {
@@ -475,10 +439,6 @@ header .container .nav-container .lang.shadow {
   top: calc(100% + 10px);
   opacity: 0;
   transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
 }
 
 .lang-list.visible {
@@ -497,10 +457,6 @@ header .container .nav-container .lang.shadow {
   padding: 5px;
   border: 1px solid var(--shadow-color);
   border-radius: unset;
-  -webkit-border-radius: unset;
-  -moz-border-radius: unset;
-  -ms-border-radius: unset;
-  -o-border-radius: unset;
 }
 
 .list-icon {
@@ -510,15 +466,7 @@ header .container .nav-container .lang.shadow {
   font-size: 28px;
   padding: 5px;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
 }
 
 .list-icon > i {
@@ -650,7 +598,7 @@ header .container .nav-container .lang.shadow {
 
 @media (max-width: 991px) {
   .landing .container {
-    flex-direction: column; /* Bild & Text untereinander */
+    flex-direction: column;
     justify-content: center;
     text-align: center;
   }
@@ -672,12 +620,11 @@ header .container .nav-container .lang.shadow {
   position: relative;
 }
 
-/* Slide-Out nach rechts */
+/* Slide Animations */
 .slide-out-right {
   animation: slideOutRight 0.8s forwards;
 }
 
-/* Slide-In von links */
 .slide-in-left {
   animation: slideInLeft 0.8s forwards;
 }
@@ -688,37 +635,21 @@ header .container .nav-container .lang.shadow {
 }
 
 @keyframes slideOutRight {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(100%); }
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 /* Ending Of Landing Style */
 
-/* Starting Of mission Style */
-
-/* Ending Of mission Style */
-
 /* Starting Of Current Activities Style */
 
 .swiper {
-  height: 450px;
+  height: 480px; /* Increased slightly to prevent overflow */
   padding-block-end: 50px;
   padding-inline: 40px;
 }
@@ -751,13 +682,16 @@ header .container .nav-container .lang.shadow {
   }
 }
 
-.activity img {
+/* --- IMPORTANT: IMAGE SIZING FOR ACTIVITIES --- */
+.current-activities .activity img {
+  width: 100% !important;
+  height: 220px !important;    /* Fixed height for all activity images */
+  max-height: none !important; /* Removes global limits */
+  object-fit: cover !important; /* Crops image cleanly */
+  flex-shrink: 0;              /* Prevents image from squishing */
   border-radius: 6px 6px 0 0;
-  -webkit-border-radius: 6px 6px 0 0;
-  -moz-border-radius: 6px 6px 0 0;
-  -ms-border-radius: 6px 6px 0 0;
-  -o-border-radius: 6px 6px 0 0;
 }
+/* --------------------------------------------- */
 
 /* Ending Of Current Activities Style */
 
@@ -808,19 +742,11 @@ header .container .nav-container .lang.shadow {
 
 .erasmus-activities .activities-container .erasmus {
   border-radius: var(--secondry-padding);
-  -webkit-border-radius: var(--secondry-padding);
-  -moz-border-radius: var(--secondry-padding);
-  -ms-border-radius: var(--secondry-padding);
-  -o-border-radius: var(--secondry-padding);
 }
 
 .erasmus-activities .activities-container .image-container img {
   height: 100%;
   border-radius: var(--secondry-padding);
-  -webkit-border-radius: var(--secondry-padding);
-  -moz-border-radius: var(--secondry-padding);
-  -ms-border-radius: var(--secondry-padding);
-  -o-border-radius: var(--secondry-padding);
 }
 
 .erasmus-activities .activities-container .card-text {
@@ -909,7 +835,6 @@ footer img {
   margin-inline: auto;
 }
 
-/* Optional: zusätzliche Begrenzung für große Bildschirme */
 @media (min-width: 768px) {
   footer img {
     max-width: 200px;
@@ -953,7 +878,7 @@ footer .copyright ul {
     text-align: center;
   }
 }
-/* Macht Telefonnummern und E-Mail-Links sichtbar & klickbar */
+
 footer .info a {
   color: var(--title-color);
   text-decoration: none;
@@ -962,11 +887,10 @@ footer .info a {
 }
 
 footer .info a:hover {
-  color: var(--main-color); /* z. B. ein markantes Blau oder Akzentton */
+  color: var(--main-color);
   text-decoration: underline;
 }
 
-/* Social Media Icons - Farbe & Hover-Effekt */
 footer .media a {
   display: inline-flex;
   align-items: center;
@@ -987,20 +911,18 @@ footer .media a[title="Instagram"]:hover {
   border-color: #c13584;
 }
 
-/* TikTok: Türkis/Blau */
 footer .media a[title="TikTok"]:hover {
   background-color: #fe2c55;
   color: #fff;
   border-color: #fe2c55;
 }
-/* Facebook: Blau */
+
 footer .media a[title="Facebook"]:hover {
   background-color: #1877f2;
   color: #fff;
   border-color: #1877f2;
 }
 
-/* Copyright-Links klickbar machen */
 footer .copyright a {
   color: var(--title-color);
   text-decoration: none;
@@ -1013,14 +935,10 @@ footer .copyright a:hover {
 }
 
 /* Ending Of Footer section Style */
+
 @keyframes up-and-down {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px); /* smoother movement */
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes left-move {
@@ -1054,7 +972,6 @@ footer .copyright a:hover {
   }
 }
 
-/* Add top space for past activities to avoid overlap */
 .past-activities {
   padding-top: 60px;
 }
