@@ -1,6 +1,6 @@
 /* Starting Of Global Variables */
 :root {
-  --background-color: #ffd700;
+  --background-color: #ffce3a;
   --secondry-background-color: #f5f5f5;
   --secondry-color: #2fabe1;
   --text-color: #060606;
@@ -98,7 +98,7 @@ svg {
 
 /* Starting Of Media Quaries */
 
-/* Small Screen*/
+/* Small Screen */
 
 @media (max-width: 767px) {
   .container {

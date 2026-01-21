@@ -27,6 +27,7 @@ body {
   font-family: "Poppins", serif;
   background-color: hsl(0, 0%, 97%);
   color: var(--text-color);
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 section {
@@ -167,7 +168,7 @@ svg {
 .card-text {
   color: var(--secondry-color);
   padding-inline: 15px; /* Slightly more padding */
-  padding-block: 10px 50px; /* Reduced top padding */
+  padding-block: 10px; /* Reduced bottom padding since button is no longer absolute */
   line-height: 1.5;
   word-break: break-word;
   margin-bottom: 0; /* Removing large margin to fit in swiper */
@@ -180,10 +181,10 @@ svg {
   padding: var(--secondry-padding);
   background-color: var(--background-color);
   color: var(--secondry-color);
-  position: absolute;
-  bottom: 15px; /* Fixed distance from bottom */
-  left: 50%;
-  transform: translateX(-50%);
+  /* Flexbox positioning instead of Absolute */
+  margin-top: auto;
+  align-self: center;
+  margin-bottom: 15px; /* Spacing from bottom edge */
   border-radius: 20px;
   font-weight: 600;
   z-index: 2;
@@ -423,7 +424,9 @@ header .container .nav-container .nav li:last-child a {
 }
 
 header .container .nav-container .lang.shadow {
-  box-shadow: 0 0 10px var(--background-color), 0 0 20px var(--background-color);
+  box-shadow:
+    0 0 10px var(--background-color),
+    0 0 20px var(--background-color);
 }
 
 .lang img {
@@ -474,7 +477,9 @@ header .container .nav-container .lang.shadow {
 }
 
 .list-icon.shadow {
-  box-shadow: 0 0 10px var(--background-color), 0 0 20px var(--background-color),
+  box-shadow:
+    0 0 10px var(--background-color),
+    0 0 20px var(--background-color),
     0 0 30px var(--background-color);
 }
 
@@ -507,6 +512,21 @@ header .container .nav-container .lang.shadow {
     border-bottom: 1px solid var(--shadow-color);
   }
 
+  /* Fix for Contact Button on Mobile to look like a normal list item */
+  header .container .nav-container .nav li:last-child {
+    background-color: transparent;
+    padding: var(--head-padding);
+    border-radius: 0;
+  }
+
+  header .container .nav-container .nav li:last-child a {
+    color: var(--secondry-color);
+  }
+
+  header .container .nav-container .nav li:last-child a:hover {
+    color: var(--text-color);
+  }
+
   header .container .nav-container .nav li a {
     color: var(--secondry-color);
   }
@@ -527,7 +547,8 @@ header .container .nav-container .lang.shadow {
 .landing {
   padding-top: 40px;
   position: relative;
-  z-index: -1;
+  z-index: 0; /* Changed from -1 to 0 to fix stacking context usually */
+  overflow: hidden; /* Clip the skewed pseudo-element */
 }
 .landing::before {
   content: "";
@@ -635,13 +656,25 @@ header .container .nav-container .lang.shadow {
 }
 
 @keyframes slideOutRight {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateX(100%); }
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 }
 
 @keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-100%); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Ending Of Landing Style */
@@ -649,7 +682,7 @@ header .container .nav-container .lang.shadow {
 /* Starting Of Current Activities Style */
 
 .swiper {
-  height: 480px; /* Increased slightly to prevent overflow */
+  height: auto; /* Remove fixed height */
   padding-block-end: 50px;
   padding-inline: 40px;
 }
@@ -685,13 +718,22 @@ header .container .nav-container .lang.shadow {
 /* --- IMPORTANT: IMAGE SIZING FOR ACTIVITIES --- */
 .current-activities .activity img {
   width: 100% !important;
-  height: 220px !important;    /* Fixed height for all activity images */
+  height: 220px !important; /* Fixed height for all activity images */
   max-height: none !important; /* Removes global limits */
   object-fit: cover !important; /* Crops image cleanly */
-  flex-shrink: 0;              /* Prevents image from squishing */
+  flex-shrink: 0; /* Prevents image from squishing */
   border-radius: 6px 6px 0 0;
 }
 /* --------------------------------------------- */
+
+/* Fix for Equal Height Cards */
+.current-activities .swiper-wrapper {
+  align-items: stretch;
+}
+
+.current-activities .swiper-slide {
+  height: auto; /* Let Flexbox control the height */
+}
 
 /* Ending Of Current Activities Style */
 
@@ -737,7 +779,14 @@ header .container .nav-container .lang.shadow {
 }
 
 .erasmus-activities .activities-container .image-container {
-  height: 425px;
+  height: auto; /* Responsive height */
+  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+}
+
+@media (min-width: 992px) {
+  .erasmus-activities .activities-container .image-container {
+    height: 425px; /* Fixed height only on larger screens if needed */
+  }
 }
 
 .erasmus-activities .activities-container .erasmus {
@@ -746,6 +795,8 @@ header .container .nav-container .lang.shadow {
 
 .erasmus-activities .activities-container .image-container img {
   height: 100%;
+  width: 100%; /* Ensure width is also constrained */
+  object-fit: cover; /* Prevents stretching by cropping */
   border-radius: var(--secondry-padding);
 }
 
@@ -803,6 +854,8 @@ header .container .nav-container .lang.shadow {
   position: relative;
   box-shadow: 0 2px 2px #00000049;
   line-height: 1.5;
+  display: flex; /* LAYOUT FIX: Enable Flexbox */
+  flex-direction: column; /* Stack children vertically */
 }
 
 .joinning .container .text-container > p:first-of-type,
@@ -822,7 +875,10 @@ footer {
   background-color: var(--secondry-color);
   color: var(--title-color);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Reduced min-width slightly */
   gap: var(--card-margin);
   align-items: center;
   padding: 20px;
@@ -937,8 +993,13 @@ footer .copyright a:hover {
 /* Ending Of Footer section Style */
 
 @keyframes up-and-down {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes left-move {
