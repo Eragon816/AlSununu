@@ -1,10 +1,9 @@
-// -------------------------
 // Start Of Elements Variables
 // -------------------------
 let langSelector = document.querySelector(".nav-container .lang");
 let langList = document.querySelector(".lang-list");
 let listIcon = document.querySelector(
-  "header .container .nav-container .list-icon"
+  "header .container .nav-container .list-icon",
 );
 let navList = document.querySelector("header .container .nav-container .nav");
 let cardBtn = document.querySelectorAll(".activity .card-button");
@@ -122,11 +121,15 @@ const texts =
         "نرافق الشباب في مسيرتهم التعليمية ونفتح لهم أبوابًا لفرص وآفاق جديدة.",
       ];
 
+// Check if we are in the pages directory
+const isPagesDir = window.location.pathname.includes("/pages/");
+const basePath = isPagesDir ? "../" : "./";
+
 const images = [
-  "/content/images/aboutus-landing.png",
-  "/content/images/activities-landing.png",
-  "/content/images/erasmus1.png",
-  "/content/images/erasmus2.png",
+  basePath + "content/images/aboutus-landing.png",
+  basePath + "content/images/activities-landing.png",
+  basePath + "content/images/erasmus1.png",
+  basePath + "content/images/erasmus2.png",
 ];
 
 let currentIndex = 0;
@@ -193,3 +196,28 @@ function slideChange() {
 if (textContainer && imageContainer) {
   setInterval(slideChange, 6000);
 }
+
+// -------------------------
+// Resize Handler
+// -------------------------
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 767) {
+    // Reset Nav List Styles
+    if (navList) {
+      navList.classList.remove("list-visible");
+      navList.style.display = ""; // Clear inline style to let CSS take over
+    }
+    if (listIcon) {
+      listIcon.classList.remove("shadow");
+    }
+
+    // Reset Lang List Styles
+    if (langList) {
+      langList.classList.remove("visible");
+      langList.style.display = ""; // Clear inline style
+    }
+    if (langSelector) {
+      langSelector.classList.remove("shadow");
+    }
+  }
+});
